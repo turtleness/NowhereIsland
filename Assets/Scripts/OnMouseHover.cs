@@ -11,6 +11,9 @@ public class OnMouseHover : MonoBehaviour
     public Camera MainCamera;
     bool _wasDiscovered;
 
+    Ray ray;
+    RaycastHit RaycastHit;
+
     // Use this for initialization
     void Start()
     {
@@ -21,15 +24,21 @@ public class OnMouseHover : MonoBehaviour
     void Update()
     {
 
-            RaycastHit RaycastHit;
-            if (Physics.Raycast(MainCamera.transform.position, MainCamera.transform.forward, out RaycastHit, 7))
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit, 7))
+        {
+            SpeciesBase animalHit = RaycastHit.transform.GetComponent<SpeciesBase>();
+
+            if (animalHit != null)
             {
-                SpeciesBase animalHit = RaycastHit.transform.GetComponent<SpeciesBase>();
-                if (animalHit != null)
-                {
                 HoverSpeciesName.gameObject.SetActive(true);
-                }
             }
+
+            else if(animalHit == null)
+            {
+                HoverSpeciesName.gameObject.SetActive(false);
+            }
+
         }
-    
+    }
 }

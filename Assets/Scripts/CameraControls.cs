@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class CameraControls : MonoBehaviour
 {
-
+    private Camera cam;
     public Transform target;
     public float MinDistance;
     public float MaxDistance;
     public float Height;
+
+    public bool RotateAroundPlayer = true;
+    public float RotationSpeed = 5.0f;
+    
 
     private Transform myTransform;
 
@@ -19,6 +23,7 @@ public class CameraControls : MonoBehaviour
             Debug.LogWarning("No target!");
 
         myTransform = transform;
+        cam = Camera.main;
     }
 
     // Update is called once per frame
