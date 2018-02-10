@@ -17,7 +17,20 @@ public class Journal
     }
 
 
+    ////GetSpecies. If its in the list, return the species object from Species.GetSpecies. If not, return null.
 
+    //public void GetSpecies(string id)
+    //{
+    //    if (FoundSpecies.Contains(id))
+    //    {
+    //        return 
+    //    }
+
+    //    else
+    //    {
+    //        return null;
+    //    }
+    //}
 }
 
 

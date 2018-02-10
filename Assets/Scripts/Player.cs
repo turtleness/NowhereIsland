@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using System.Collections;
 
 public class Player : MonoBehaviour {
 
@@ -17,6 +18,12 @@ public class Player : MonoBehaviour {
         controller = GetComponent<ThirdPersonCharacter>();
         
     }
+
+    private void Start()
+    {
+ 
+    }
+
     private void Update()
     {
         Inputs();
@@ -26,16 +33,32 @@ public class Player : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //RaycastHit testHit;
+            //if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out testHit, Mathf.Infinity))
+            //{
+            //    Debug.Log(Vector3.Distance(transform.position, testHit.transform.position));
+            //}
 
-            RaycastHit RaycastHit;
-            if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out RaycastHit, 7))
+            RaycastHit hit;
+            Ray ray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity)) //you can change infinity for your own distance
             {
-                SpeciesBase animalHit = RaycastHit.transform.GetComponent<SpeciesBase>();
+                SpeciesBase animalHit = hit.transform.GetComponent<SpeciesBase>();
                 if (animalHit != null)
                 {
                     Journal.AddSpecies(animalHit.ID);
                 }
             }
+
+            //RaycastHit RaycastHit;
+            //if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out RaycastHit, 7))
+            //{
+            //    SpeciesBase animalHit = RaycastHit.transform.GetComponent<SpeciesBase>();
+            //    if (animalHit != null)
+            //    {
+            //        Journal.AddSpecies(animalHit.ID);
+            //    }
+            //}
 
         }
 

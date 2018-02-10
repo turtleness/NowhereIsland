@@ -32,9 +32,9 @@ public class OnMouseHover : MonoBehaviour
             if (animalHit != null)
             {
                 HoverSpeciesName.gameObject.SetActive(true);
+                //Player.instance.Journal.
             }
-
-            else if(animalHit == null)
+            else
             {
                 HoverSpeciesName.gameObject.SetActive(false);
             }
