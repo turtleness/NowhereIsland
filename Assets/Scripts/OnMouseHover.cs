@@ -14,11 +14,7 @@ public class OnMouseHover : MonoBehaviour
     Ray ray;
     RaycastHit RaycastHit;
 
-    // Use this for initialization
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,14 +28,25 @@ public class OnMouseHover : MonoBehaviour
             if (animalHit != null)
             {
                 HoverSpeciesName.gameObject.SetActive(true);
-                //Player.instance.Journal.
-                HoverSpeciesName.text = animalHit.name;
+                Species hitSpecies = Player.instance.Journal.GetSpecies(animalHit.ID);
+                if (hitSpecies != null)
+                {
+                    HoverSpeciesName.text = hitSpecies.Name;
+                }
+                else {
+                    HoverSpeciesName.text = "???";
+
+                }
             }
             else
             {
                 HoverSpeciesName.gameObject.SetActive(false);
             }
 
+        }
+        else
+        {
+            HoverSpeciesName.gameObject.SetActive(false);
         }
     }
 }
