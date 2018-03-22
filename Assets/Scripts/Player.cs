@@ -6,22 +6,24 @@ public class Player : MonoBehaviour {
 
     public UI PlayerUI;
     public static Player instance;
-    public Journal Journal = new Journal();
+    public Journal Journal;
     public Camera PlayerCamera;
     public GameObject JournalUI;
+    public ProgressBarScript Progress;
+
     public ThirdPersonCharacter controller;
+
+    public Player()
+    {
+        Journal = new Journal(this);
+    }
 
     private void Awake()
     {
         if (instance == null) instance = this;
 
         controller = GetComponent<ThirdPersonCharacter>();
-        
-    }
-
-    private void Start()
-    {
- 
+        Progress.Initialize(Species.SpeciesList.Count);
     }
 
     private void Update()

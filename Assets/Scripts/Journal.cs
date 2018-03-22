@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Journal
 {
-
     List<string> FoundSpecies = new List<string>();
+
+    private Player player;
+
+    public Journal(Player player)
+    {
+        this.player = player;
+    }
 
     public void AddSpecies (string id)
     {
         if (Species.SpeciesList.ContainsKey(id) && !FoundSpecies.Contains(id))
         {
+            //Adding a new species
             FoundSpecies.Add(id);
-            Player.instance.PlayerUI.AddPage(Species.SpeciesList[id]);
+            player.PlayerUI.AddPage(Species.SpeciesList[id]);
+            player.Progress.ProgressUpdate(FoundSpecies.Count);
         }
     }
 

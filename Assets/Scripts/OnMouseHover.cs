@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OnMouseHover : MonoBehaviour
 {
 
-    public Text HoverSpeciesName;
+    public TextMeshProUGUI HoverSpeciesName;
     public float ReachRay;
     public Camera MainCamera;
     bool _wasDiscovered;
@@ -19,7 +20,6 @@ public class OnMouseHover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit, 7))
         {
