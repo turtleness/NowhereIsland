@@ -4694,9 +4694,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f40d57f3c8208f4981dc3381163eb00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveRatio: 1
+  MoveRatio: 0.8
   CameraDistance: 4
   CameraTarget: {fileID: 897104012}
+  player: {fileID: 738261659}
+  MinXRotation: -5
+  MaxXRotation: 65
 --- !u!1 &1202805339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5113,8 +5116,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1319044175}
-  m_LocalRotation: {x: 0.20295753, y: 0.17806214, z: 0.037561543, w: -0.9621285}
-  m_LocalPosition: {x: 546.2255, y: 0.008292675, z: 412.75156}
+  m_LocalRotation: {x: 0.20295751, y: 0.17806214, z: 0.037561536, w: -0.9621285}
+  m_LocalPosition: {x: 546.2255, y: 0.008293152, z: 412.75156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

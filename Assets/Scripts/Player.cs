@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
 
     void Inputs()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
             //RaycastHit testHit;
             //if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out testHit, Mathf.Infinity))
