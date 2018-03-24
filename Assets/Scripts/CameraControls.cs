@@ -2,45 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class CameraControls : MonoBehaviour
 {
-    private Camera cam;
-    public Transform target;
-    public float MinDistance;
-    public float MaxDistance;
-    public float Height;
 
-    public bool RotateAroundPlayer = true;
-    public float RotationSpeed = 5.0f;
-    
+    public float MoveRatio = 1;
+    public float CameraDistance = 4f;
+    public Transform CameraTarget;
 
-    private Transform myTransform;
+    private Vector3 PastTargetPos;
 
-    // Use this for initialization
-    void Start()
+    public void Start()
     {
-        if (target == null)
-            Debug.LogWarning("No target!");
-
-        myTransform = transform;
-        cam = Camera.main;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        PastTargetPos = CameraTarget.position;
     }
 
     void LateUpdate()
     {
-        //Always called after update
-        // character moving in update, if camera moves at the same time as character, it might try to move before even knowing what the character will do
-        //in late update, camera will adjust its pos. after the character
-
-        myTransform.position = new Vector3(target.position.x, target.position.y + Height, target.position.z - MinDistance);
-       // myTransform.LookAt(target.position);
-
+        Vector3 CameraMovement = CameraTarget.position - PastTargetPos;
+        transform.position += CameraMovement;
+        if (Input.GetMouseButton(1))
+        {
+            //While right mouse is being held down
+            Vector3 MouseMovement = new Vector3(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y")) * MoveRatio;
+            transform.Translate(MouseMovement); 
+        }
+        transform.LookAt(CameraTarget);
+        float Distance = Vector3.Distance(transform.position, CameraTarget.position);
+        float difference = Distance - CameraDistance;
+        transform.Translate(new Vector3(0, 0, difference));
     }
 
 }

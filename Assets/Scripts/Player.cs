@@ -75,9 +75,9 @@ public class Player : MonoBehaviour {
             }
             else
             {
-                controller.enabled = true;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                //controller.enabled = true;
+                //Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
             }
         
         }
