@@ -9,5 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: bd9067235510c674d83ad10d0fee239b
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 4f1d113d490b86145bfd330f2999c8c4
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: 5429a00be879c9245b5106854aeaf392
+  - enabled: 0
     path: Assets/Scenes/hahahaha.unity
     guid: 8e9c085cfb264b04fb6cc8e29af9acc3
