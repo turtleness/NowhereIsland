@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Journal
 {
@@ -21,6 +22,12 @@ public class Journal
             FoundSpecies.Add(id);
             player.PlayerUI.AddPage(Species.SpeciesList[id]);
             player.Progress.ProgressUpdate(FoundSpecies.Count);
+
+            if (FoundSpecies.Count == Species.SpeciesList.Count)
+            {
+                //Win!
+                player.gameObject.AddComponent<EndLoadWait>();
+            }
         }
     }
 
