@@ -12,10 +12,16 @@ public class Player : MonoBehaviour {
     public ProgressBarScript Progress;
 
     public ThirdPersonCharacter controller;
+    public Animator animator;
 
     public Player()
     {
         Journal = new Journal(this);
+    }
+
+    public void Start()
+    {
+        animator = GetComponent<Animator>();
     }
 
     private void Awake()

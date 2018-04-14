@@ -134,7 +134,7 @@ ModelImporter:
     4300000: character mesh_MeshPart0
     4300002: character mesh_MeshPart1
     4300004: character mesh_MeshPart2
-    7400000: Take 001
+    7400000: RegisterSpecies
     9500000: //RootNode
     13700000: character mesh_MeshPart0
     13700002: character mesh_MeshPart1
@@ -166,7 +166,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: RegisterSpecies
       takeName: Take 001
       firstFrame: 0
       lastFrame: 68

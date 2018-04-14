@@ -22,6 +22,7 @@ public class Journal
             FoundSpecies.Add(id);
             player.PlayerUI.AddPage(Species.SpeciesList[id]);
             player.Progress.ProgressUpdate(FoundSpecies.Count);
+            player.animator.SetTrigger("Register");
 
             if (FoundSpecies.Count == Species.SpeciesList.Count)
             {

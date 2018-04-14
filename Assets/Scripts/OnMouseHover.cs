@@ -14,8 +14,13 @@ public class OnMouseHover : MonoBehaviour
 
     Ray ray;
     RaycastHit RaycastHit;
+    Animator animator;
+    bool playedAnim = false;
 
-
+    public void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,21 +37,28 @@ public class OnMouseHover : MonoBehaviour
                 if (hitSpecies != null)
                 {
                     HoverSpeciesName.text = hitSpecies.Name;
+                    playedAnim = false;
                 }
                 else {
                     HoverSpeciesName.text = "???";
-
+                    if (!playedAnim)
+                    {
+                        animator.SetTrigger("NewSpecies");
+                        playedAnim = true; 
+                    }
                 }
             }
             else
             {
                 HoverSpeciesName.gameObject.SetActive(false);
+                playedAnim = false;
             }
 
         }
         else
         {
             HoverSpeciesName.gameObject.SetActive(false);
+            playedAnim = false;
         }
     }
 }
