@@ -16,17 +16,18 @@ public class CameraControls : MonoBehaviour
     private Vector3 PastTargetPos;
     private float LastYPos;
 
+    private Vector3 LastCameraPosition;
+    private Quaternion LastCameraRotation;
+
     public void Start()
     {
         PastTargetPos = CameraTarget.position;
-        LastYPos = transform.position.y;
+        UpdateTargetMovePos();
     }
 
     void LateUpdate()
     {
-        Vector3 CameraMovement = CameraTarget.position - PastTargetPos;
-        transform.position += CameraMovement;
-        PastTargetPos = CameraTarget.position;
+        UpdateTargetMovePos();
 
         if (Input.GetMouseButtonDown(1) && !PauseMenu.isGamePaused && !player.JournalUI.activeSelf)
         {
@@ -42,27 +43,41 @@ public class CameraControls : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            //While right mouse is being held down
             Vector3 MouseMovement = new Vector3(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y")) * MoveRatio;
-            transform.Translate(MouseMovement); 
+            DoCameraRotation(MouseMovement);
         }
+    }
+
+    void UpdateTargetMovePos()
+    {
+        //Update camera position to follow camera.
+        Vector3 CameraMovement = CameraTarget.position - PastTargetPos;
+        transform.position += CameraMovement;
+        PastTargetPos = CameraTarget.position;
+    }
+
+    void DoCameraRotation(Vector3 MouseMovement)
+    {
+        //Store the current camera rotation and position incase we need to revert to this.
+        LastCameraPosition = transform.position;
+        LastCameraRotation = transform.rotation;
+
+        //While right mouse is being held down
+        
+        transform.Translate(MouseMovement);
+
         transform.LookAt(CameraTarget);
         float Distance = Vector3.Distance(transform.position, CameraTarget.position);
         float difference = Distance - CameraDistance;
         transform.Translate(new Vector3(0, 0, difference));
 
-        //Clamp the cameras rotation
-        if(transform.localEulerAngles.x > MaxXRotation || transform.localEulerAngles.x < MinXRotation)
+        //Undo the operation and repeat with no Y Movement.
+        if (transform.localEulerAngles.x > MaxXRotation || transform.localEulerAngles.x < MinXRotation)
         {
-            Vector3 newPos = transform.position;
-            newPos.y = LastYPos;
-            transform.position = newPos;
-            transform.LookAt(CameraTarget);
+            transform.position = LastCameraPosition;
+            transform.rotation = LastCameraRotation;
+            //This is bad but works soo \__(`.`)_/
+            DoCameraRotation(new Vector3(-Input.GetAxis("Mouse X"), 0));
         }
-        else{
-            LastYPos = transform.position.y;
-        }
-        
     }
-
 }
