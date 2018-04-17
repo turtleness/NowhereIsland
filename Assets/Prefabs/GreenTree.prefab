@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33210642299717158}
   - component: {fileID: 23803487750071782}
   - component: {fileID: 136695315717061146}
-  - component: {fileID: 114836337817206230}
+  - component: {fileID: 114068391001690780}
   m_Layer: 8
   m_Name: GreenTree
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602738012769132}
   m_Mesh: {fileID: 4300000, guid: ab7d778a80f144b4b8b5f1c50a3078d1, type: 3}
---- !u!114 &114836337817206230
+--- !u!114 &114068391001690780
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,10 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1602738012769132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ff68d3e5d231042879ea40200057b1, type: 3}
+  m_Script: {fileID: 11500000, guid: d53f0b5c5e19e76449f4c37edc93ff44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: plant.greentree
+  ID: tree.greentree
 --- !u!136 &136695315717061146
 CapsuleCollider:
   m_ObjectHideFlags: 1

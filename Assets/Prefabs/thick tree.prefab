@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33330419736147168}
   - component: {fileID: 23928107392033156}
   - component: {fileID: 136218509171073152}
+  - component: {fileID: 114060415450528624}
   m_Layer: 8
   m_Name: thick tree
   m_TagString: Untagged
@@ -82,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1745627214689466}
   m_Mesh: {fileID: 4300000, guid: 718a18a219df3024dbfbcd7581394586, type: 3}
+--- !u!114 &114060415450528624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745627214689466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53f0b5c5e19e76449f4c37edc93ff44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: tree.firfoliage
 --- !u!136 &136218509171073152
 CapsuleCollider:
   m_ObjectHideFlags: 1

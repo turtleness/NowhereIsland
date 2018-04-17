@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33024224051153130}
   - component: {fileID: 23341277694690328}
   - component: {fileID: 136877790643061108}
+  - component: {fileID: 114096507298836462}
   m_Layer: 8
   m_Name: Thin Tree
   m_TagString: Untagged
@@ -82,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638241139020254}
   m_Mesh: {fileID: 4300000, guid: 15ca815af5b52464ebfef9894733510d, type: 3}
+--- !u!114 &114096507298836462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638241139020254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53f0b5c5e19e76449f4c37edc93ff44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: tree.thintree
 --- !u!136 &136877790643061108
 CapsuleCollider:
   m_ObjectHideFlags: 1

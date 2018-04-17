@@ -47,6 +47,11 @@ public class Species
         {
             "tree.frozentree", new Species("Frost Birch", "Tree", "A small sized tree with frozen leaves. They don't seem to be dead. This tree only grows on high mountains.")
         }
+        ,
+        {
+            "tree.thintree", new Species("", "", "")
+        }
+
 
     };
     

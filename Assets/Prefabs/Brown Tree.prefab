@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33386498891453472}
   - component: {fileID: 23038541286568530}
   - component: {fileID: 136248447712139664}
+  - component: {fileID: 114461818044903256}
   m_Layer: 8
   m_Name: Brown Tree
   m_TagString: Untagged
@@ -82,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1216356444381558}
   m_Mesh: {fileID: 4300000, guid: 88d2bbdd1dd48a4499c35617eeb8ffc3, type: 3}
+--- !u!114 &114461818044903256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216356444381558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53f0b5c5e19e76449f4c37edc93ff44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: tree.browntree
 --- !u!136 &136248447712139664
 CapsuleCollider:
   m_ObjectHideFlags: 1

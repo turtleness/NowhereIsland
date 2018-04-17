@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4443969658071454}
   - component: {fileID: 136364219542522718}
+  - component: {fileID: 114230147729370114}
   m_Layer: 9
   m_Name: small plants
   m_TagString: Untagged
@@ -367,6 +368,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114230147729370114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1245908479069850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ff68d3e5d231042879ea40200057b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: plant.darkgrass
 --- !u!136 &136364219542522718
 CapsuleCollider:
   m_ObjectHideFlags: 1

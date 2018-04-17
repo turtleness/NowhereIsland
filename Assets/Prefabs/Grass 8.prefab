@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 33486829926895348}
   - component: {fileID: 23243655172735526}
   - component: {fileID: 136652880513934156}
+  - component: {fileID: 114562858254891790}
   m_Layer: 9
   m_Name: Grass 8
   m_TagString: Untagged
@@ -806,6 +807,18 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21690200943546976}
   optimizedCutoutMaterial: {fileID: 21860389981859858}
   isInPreviewMode: 0
+--- !u!114 &114562858254891790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899418348076418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ff68d3e5d231042879ea40200057b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: plant.pinkflowers
 --- !u!136 &136652880513934156
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -813,7 +826,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899418348076418}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.0000002
   m_Height: 1.9129719
