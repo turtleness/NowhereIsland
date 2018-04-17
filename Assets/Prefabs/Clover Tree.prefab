@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33651197600830204}
   - component: {fileID: 23707416703899626}
   - component: {fileID: 136042432492407452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Clover Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

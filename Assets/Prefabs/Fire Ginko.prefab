@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33489021674873776}
   - component: {fileID: 23952880623560492}
   - component: {fileID: 136769472200953062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire Ginko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
