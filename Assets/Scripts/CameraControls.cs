@@ -56,7 +56,7 @@ public class CameraControls : MonoBehaviour
         PastTargetPos = CameraTarget.position;
     }
 
-    void DoCameraRotation(Vector3 MouseMovement)
+    void DoCameraRotation(Vector3 MouseMovement, bool retry = false)
     {
         //Store the current camera rotation and position incase we need to revert to this.
         LastCameraPosition = transform.position;
@@ -72,12 +72,13 @@ public class CameraControls : MonoBehaviour
         transform.Translate(new Vector3(0, 0, difference));
 
         //Undo the operation and repeat with no Y Movement.
-        if (transform.localEulerAngles.x > MaxXRotation || transform.localEulerAngles.x < MinXRotation)
+        if (!retry && (transform.localEulerAngles.x > MaxXRotation || transform.localEulerAngles.x < MinXRotation))
         {
             transform.position = LastCameraPosition;
             transform.rotation = LastCameraRotation;
             //This is bad but works soo \__(`.`)_/
-            DoCameraRotation(new Vector3(-Input.GetAxis("Mouse X"), 0));
+            //Nvm fixed it :D
+            DoCameraRotation(new Vector3(-Input.GetAxis("Mouse X"), 0), true);
         }
     }
 }

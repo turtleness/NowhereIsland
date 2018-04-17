@@ -19,7 +19,7 @@ public class ProgressBarScript : MonoBehaviour
     public void ProgressUpdate(int progressValue)
     {
         ProgressBar.value = progressValue;
-        ProgressText.text = (progressValue / ProgressBar.maxValue) * 100 + "%";
+        ProgressText.text = (int)((progressValue / ProgressBar.maxValue) * 100) + "%";
     }
 
 }
