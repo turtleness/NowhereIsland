@@ -22,12 +22,13 @@ GameObject:
   - component: {fileID: 33928171034577326}
   - component: {fileID: 23840277260623086}
   - component: {fileID: 95321063563237992}
+  - component: {fileID: 136128188822097836}
   m_Layer: 0
   m_Name: smallLogHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1240980714738434
 GameObject:
@@ -42,7 +43,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4514541591684192
 Transform:
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1240980714738434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 460.4983, y: 35.992138, z: 206.99654}
+  m_LocalPosition: {x: 469.68063, y: -5.8752084, z: 303.85553}
   m_LocalScale: {x: 3.0579083, y: 2.5909257, z: 1}
   m_Children:
   - {fileID: 4597541679608402}
@@ -127,3 +128,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &136128188822097836
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1236519754987558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 1.93
+  m_Direction: 2
+  m_Center: {x: -0.0015724861, y: 0.0000026859307, z: -0.66855156}

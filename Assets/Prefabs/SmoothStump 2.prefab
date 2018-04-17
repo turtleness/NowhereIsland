@@ -21,12 +21,13 @@ GameObject:
   - component: {fileID: 4379278418131530}
   - component: {fileID: 33791884020169432}
   - component: {fileID: 23988808988146626}
+  - component: {fileID: 65620558065586104}
   m_Layer: 0
   m_Name: smoothStump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1564966642185502
 GameObject:
@@ -41,7 +42,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4379278418131530
 Transform:
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564966642185502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 467.39908, y: 35.234, z: 201.07036}
+  m_LocalPosition: {x: 466.32333, y: -14.815636, z: 309.79584}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4379278418131530}
@@ -109,3 +110,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433373749045136}
   m_Mesh: {fileID: 4300000, guid: 772603657de80594a804f51ffea00f0f, type: 3}
+--- !u!65 &65620558065586104
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433373749045136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02300411, y: 0.022835236, z: 0.014219281}
+  m_Center: {x: 0.0003621988, y: 0.000079222045, z: -0.0047004777}
