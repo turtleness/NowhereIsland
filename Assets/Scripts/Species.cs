@@ -26,7 +26,10 @@ public class Species
            "animal.hedgehog", new Species("Sand Hedgehog", "Animal",  "This is a hedgehog that makes its nests in the sand. It's solitary and feeds on red sand snakes.")
         },
         {
-            "plant.greentree", new Species("Green Tree", "Plant", "This is a tree")
+            "tree.greentree", new Species("Greenland Tree", "Tree", "This tree grows near beackes or in flat, grassy areas. The leaves have peculiar texture which may leave rashes on your hands if rubbed too forcefully.")
+        },
+        {
+            "plant."
         }
     };
     

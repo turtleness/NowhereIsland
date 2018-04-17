@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4446451756382572}
   - component: {fileID: 33185829138606746}
   - component: {fileID: 23526918394463070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_NaturePlants0032_1_alphamasked_S003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4443969658071454}
-  m_Layer: 0
+  - component: {fileID: 136364219542522718}
+  m_Layer: 9
   m_Name: small plants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +54,7 @@ GameObject:
   - component: {fileID: 4092346128926866}
   - component: {fileID: 33075960857677132}
   - component: {fileID: 23407907307447954}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_NaturePlants0032_1_alphamasked_S001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +71,7 @@ GameObject:
   - component: {fileID: 4596908716000410}
   - component: {fileID: 33204359426726984}
   - component: {fileID: 23844996890474612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_NaturePlants0032_1_alphamasked_S002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +88,7 @@ GameObject:
   - component: {fileID: 4666801434107502}
   - component: {fileID: 33969505807859350}
   - component: {fileID: 23392459107410340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_NaturePlants0032_1_alphamasked_S004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4460215825093120}
   - component: {fileID: 95479213639262902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: plantLeaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,3 +367,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &136364219542522718
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1245908479069850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

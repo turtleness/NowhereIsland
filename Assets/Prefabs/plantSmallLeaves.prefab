@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33931124857205882}
   - component: {fileID: 23702429406103458}
   - component: {fileID: 95187053496327862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: smallLeavesPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4842911597700332}
-  m_Layer: 0
+  - component: {fileID: 136762302531678618}
+  m_Layer: 9
   m_Name: plantSmallLeaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,3 +128,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &136762302531678618
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947620822427782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.05
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

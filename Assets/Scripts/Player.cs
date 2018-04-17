@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
 
             RaycastHit hit;
             Ray ray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity)) //you can change infinity for your own distance
+            if (Physics.Raycast(ray, out hit, 7, LayerMask.GetMask("Foliage", "Tree"), QueryTriggerInteraction.Collide))
             {
                 SpeciesBase animalHit = hit.transform.GetComponent<SpeciesBase>();
                 if (animalHit != null)

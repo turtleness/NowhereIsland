@@ -26,7 +26,7 @@ public class OnMouseHover : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit, 7))
+        if (Physics.Raycast(ray, out RaycastHit, 7, LayerMask.GetMask("Foliage", "Tree"), QueryTriggerInteraction.Collide))
         {
             SpeciesBase animalHit = RaycastHit.transform.GetComponent<SpeciesBase>();
 

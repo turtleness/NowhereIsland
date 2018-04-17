@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4656743381679392}
   - component: {fileID: 95619162957802924}
-  m_Layer: 0
+  - component: {fileID: 136917306106722364}
+  m_Layer: 9
   m_Name: smallPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +38,7 @@ GameObject:
   - component: {fileID: 4920688240128180}
   - component: {fileID: 33706422986492436}
   - component: {fileID: 23540451923651202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_Branches0028_1_S003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +55,7 @@ GameObject:
   - component: {fileID: 4259742374292618}
   - component: {fileID: 33488709582860112}
   - component: {fileID: 23825291220112474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_Branches0028_1_S001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ GameObject:
   - component: {fileID: 4365833598303702}
   - component: {fileID: 33536217966296780}
   - component: {fileID: 23789471095610298}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TexturesCom_Branches0028_1_S002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,3 +268,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &136917306106722364
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1180600599858658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
