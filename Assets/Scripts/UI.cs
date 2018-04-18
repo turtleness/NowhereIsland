@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UI : MonoBehaviour {
 
-    public List<GameObject> SpeciesObjects;
+    public List<GameObject> Pages;
     public int CurrentPage = 0;
 
 	public GameObject LeftPage;
@@ -12,28 +12,20 @@ public class UI : MonoBehaviour {
 	
 	private bool IsLeftPage(int Pagenumber)
     {
-
-        if (Pagenumber % 2 == 0 && Pagenumber == 0)
-        {
-            return true;
-        }
-
-        else{
-            return false;
-        }
+        return (Pagenumber % 2 == 0);
     }
 
     public void NextPage()
     {
-        if (CurrentPage +2 <= SpeciesObjects.Count -1) {
-            SpeciesObjects[CurrentPage].SetActive(false);
-            SpeciesObjects[CurrentPage +1].SetActive(false);
+        if (CurrentPage +2 <= Pages.Count -1) {
+            Pages[CurrentPage].SetActive(false);
+            Pages[CurrentPage +1].SetActive(false);
             CurrentPage = CurrentPage + 2;
-            SpeciesObjects[CurrentPage].SetActive(true);
+            Pages[CurrentPage].SetActive(true);
 
-            if(CurrentPage + 1 > SpeciesObjects.Count)
+            if(CurrentPage + 1 < Pages.Count)
             {
-                SpeciesObjects[CurrentPage + 1].SetActive(true);
+                Pages[CurrentPage + 1].SetActive(true);
             }
         }
     }
@@ -42,34 +34,22 @@ public class UI : MonoBehaviour {
     {
         if (CurrentPage != 0)
         {
-            SpeciesObjects[CurrentPage].SetActive(false);
-            if (CurrentPage + 1 > SpeciesObjects.Count)
+            Pages[CurrentPage].SetActive(false);
+            if (CurrentPage + 1 < Pages.Count)
             {
-                SpeciesObjects[CurrentPage + 1].SetActive(false);
+                Pages[CurrentPage + 1].SetActive(false);
             }
             CurrentPage = CurrentPage - 2;
-            SpeciesObjects[CurrentPage].SetActive(true);
-            SpeciesObjects[CurrentPage + 1].SetActive(true);
+            Pages[CurrentPage].SetActive(true);
+            Pages[CurrentPage + 1].SetActive(true);
 
         }
     }
 
     public void AddPage(Species AddedSpecies)
     {
-        if (IsLeftPage(SpeciesObjects.Count -1))
-        {
-            //Right Page
-            GameObject NewPage = Instantiate(RightPage, RightPage.transform.parent);
-            if (CurrentPage == 0) {
-                NewPage.SetActive(true);
-            }
-            UIpage UiRef = NewPage.GetComponent<UIpage>();
-            UiRef.NameText.text = AddedSpecies.Name;
-            UiRef.SpeciesTypeText.text = AddedSpecies.SpeciesType;
-            UiRef.DescriptionText.text = AddedSpecies.Description;
-            SpeciesObjects.Add(NewPage);
-        }
-        else
+        //Decide what this new page needs to be.
+        if (IsLeftPage(Pages.Count))
         {
             //left page
             GameObject NewPage = Instantiate(LeftPage, LeftPage.transform.parent);
@@ -77,7 +57,21 @@ public class UI : MonoBehaviour {
             UiRef.NameText.text = AddedSpecies.Name;
             UiRef.SpeciesTypeText.text = AddedSpecies.SpeciesType;
             UiRef.DescriptionText.text = AddedSpecies.Description;
-            SpeciesObjects.Add(NewPage);
+            Pages.Add(NewPage);
+        }
+        else
+        {
+            //Right Page
+            GameObject NewPage = Instantiate(RightPage, RightPage.transform.parent);
+            if (Pages.Count == 1)
+            {
+                NewPage.SetActive(true);
+            }
+            UIpage UiRef = NewPage.GetComponent<UIpage>();
+            UiRef.NameText.text = AddedSpecies.Name;
+            UiRef.SpeciesTypeText.text = AddedSpecies.SpeciesType;
+            UiRef.DescriptionText.text = AddedSpecies.Description;
+            Pages.Add(NewPage);
         }
     }
 }

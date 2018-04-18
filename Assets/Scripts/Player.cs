@@ -13,21 +13,19 @@ public class Player : MonoBehaviour {
 
     public ThirdPersonCharacter controller;
     public Animator animator;
-
-    public Player()
-    {
-        Journal = new Journal(this);
-    }
+    private Rigidbody rigidbody;
 
     public void Start()
     {
         animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Awake()
+    public void Awake()
     {
         if (instance == null) instance = this;
 
+        Journal = new Journal(this);
         controller = GetComponent<ThirdPersonCharacter>();
         Progress.Initialize(Species.SpeciesList.Count);
     }
@@ -76,12 +74,14 @@ public class Player : MonoBehaviour {
             if (JournalUI.activeSelf)
             {
                 controller.enabled = false;
+                rigidbody.isKinematic = true;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }
             else
             {
-                //controller.enabled = true;
+                controller.enabled = true;
+                rigidbody.isKinematic = false;
                 //Cursor.visible = false;
                 //Cursor.lockState = CursorLockMode.Locked;
             }
