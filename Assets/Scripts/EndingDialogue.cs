@@ -8,16 +8,15 @@ public class EndingDialogue : MonoBehaviour {
 
     public Text Name;
     public Text Dialogue;
-    public GameObject OrganizationMember;
-    public GameObject MainCharacter;
     public int Progression;
     public GameObject nextbutton;
     public GameObject DialoguePanel;
     public GameObject NamePanel;
     public TextMeshProUGUI EndingText;
-
+    public GameObject MenuButton;
     private void Start()
     {
+        MenuButton.SetActive(false);
         EndingText.gameObject.SetActive(false);
 
         DialoguePanel.SetActive(true);
@@ -35,8 +34,6 @@ public class EndingDialogue : MonoBehaviour {
             Name.text = " Organization X ";
             Dialogue.text = "Congratulations on completing the mission. I must admit, everyone was surprised that you came back safely... Not that I wish to imply that anything bad should have happened.";
 
-            OrganizationMember.SetActive(true);
-            MainCharacter.SetActive(false);
         }
 
         else if(Progression == 2)
@@ -44,8 +41,6 @@ public class EndingDialogue : MonoBehaviour {
             Name.text = "???";
             Dialogue.text = "Thank you... I suppose. Now, about my reward...";
 
-            OrganizationMember.SetActive(false);
-            MainCharacter.SetActive(true);
         }
 
         else if (Progression == 3)
@@ -53,8 +48,6 @@ public class EndingDialogue : MonoBehaviour {
             Name.text = " Organization X ";
             Dialogue.text = "Right, we will make sure your cash is deposited into your account soon.";
 
-            OrganizationMember.SetActive(true);
-            MainCharacter.SetActive(false);
         }
 
         else if (Progression == 4)
@@ -62,8 +55,6 @@ public class EndingDialogue : MonoBehaviour {
             Name.text = "???";
             Dialogue.text = "Thank you.";
 
-            OrganizationMember.SetActive(false);
-            MainCharacter.SetActive(true);
         }
 
 
@@ -71,14 +62,11 @@ public class EndingDialogue : MonoBehaviour {
         {
             Name.text = "";
             Dialogue.text = "";
-
-
-            OrganizationMember.SetActive(false);
-            MainCharacter.SetActive(false);
             nextbutton.SetActive(false);
-            DialoguePanel.SetActive(false);
+            //DialoguePanel.SetActive(false);
             NamePanel.SetActive(false);
             EndingText.gameObject.SetActive(true);
+            MenuButton.SetActive(true);
 
         }
     }
