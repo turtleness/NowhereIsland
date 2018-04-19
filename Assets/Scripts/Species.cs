@@ -49,10 +49,48 @@ public class Species
         }
         ,
         {
-            "tree.thintree", new Species("", "", "")
+            "tree.thintree", new Species("Thin Sycamore", "Tree", "A tree with many branches and a very small trunk. It is almost a wonder how it can stant upright.")
         }
-
-
+        ,
+        {
+            "plant.tinytree", new Species("Delirium", "Plant", "This miniature tree can be found all around the island. Its leaves maintain the colour orange all throughout the season. Once a year, it will bear a single fruit which can have similar effects to Marijuana if consummed.")
+        }
+        ,
+        {
+            "plant.redbranches", new Species("Crimson Yew", "Plant", "This plant prefers warm weather. The colour of its leaves never fades, regardless of the season. They tend to grow around Fire Grandifolia and will rarely be seen in other habitats.")
+        }
+        ,
+        {
+            "plant.drygrass", new Species("Straw Dulce", "Plant", "This type of tall grass only grows around humid, still waters. It has a sweet taste that resembles sugar.")
+        }        
+        ,
+        {
+            "plant.drybranches", new Species("The living dead", "Plant", "Although these charcoal branches look dead, if they are broken apart, a liquid green ooze will come out of them. It can be found all around the island, especially in dry or cliff areas. Its effects need to be further studied.")
+        }        
+        ,
+        {
+            "plant.pinkflowers", new Species("Rosemary thistle", "Plant", "This type of thistle can be used as a condiment as it has many properties in common with rosemary.")
+        }        
+        ,
+        {
+            "plant.greenleaves", new Species("Green Symphytum", "Plant", "This type of Symphytum grows no flowers. It can be used as a quick remedy for the flu.")
+        }        
+        ,
+        {
+            "plant.whitesmall", new Species("Somnium","Plant", "This plant can be used to make sleep-inducing tea.")
+        }
+         ,
+        {
+            "plant.darkgrass", new Species("Purple Draconia", "Plant", "This is a plant with dark purple leaves that is poisonous to the touch. It will leave purple rashes over the skin.")
+        } 
+        ,
+        {
+            "plant.greenfern", new Species("Abyss Fern", "Plant", "The roots of this type of fern can reach several feet underground. It is impossible to pull them out so the leaves always need to be cut to prevent mass spreading. Luckily, they have been the source of food for many animals and are now less common.")
+        } 
+        ,
+        {
+            "plant.thinflowers", new Species("Boar's eye", "Plant", "This flower seems to have a strong effect on wild Boars. It will make them agressive.")
+        }
     };
     
 
@@ -62,6 +100,5 @@ public class Species
     {
         return SpeciesList[SpeciesID.ToLower()];
     }
-
 
 }

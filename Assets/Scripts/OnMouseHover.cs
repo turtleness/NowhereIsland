@@ -33,7 +33,7 @@ public class OnMouseHover : MonoBehaviour
             if (animalHit != null)
             {
                 HoverSpeciesName.gameObject.SetActive(true);
-                Species hitSpecies = Player.instance.Journal.GetSpecies(animalHit.ID);
+                Species hitSpecies = Player.instance.Journal.GetSpecies(animalHit.ID.ToLower());
                 if (hitSpecies != null)
                 {
                     HoverSpeciesName.text = hitSpecies.Name;
